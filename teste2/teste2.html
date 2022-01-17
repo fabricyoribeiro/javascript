@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste js</title>
+</head>
+<body>
+    <div id="res">
+
+    </div>
+    <ul>
+        <li>oi</li>
+        <li>ola</li>
+        <li>oi</li>
+    </ul>
+    <div>
+        Adicionar na lista: <input type="text" name="" id="elemento">
+        <input type="button" value="Aicionar elemento na lista" onclick="adicionar()">
+    </div>
+    <script>
+        /*var p = document.createElement('p')
+        p.innerHTML = 'ola, mundo'
+        document.getElementById('res').appendChild(p)
+        var h1 = document.createElement('h1')
+        h1.innerHTML = 'ola pessoa'
+        document.getElementById('res').appendChild(h1)*/
+
+        function adicionar() {
+            var elemento = document.getElementById('elemento')
+            var lista = document.getElementsByTagName('ul')[0]
+            var itens = lista.children
+            var novoItem = document.createElement('li')
+            novoItem.innerText = elemento.value
+            lista.appendChild(novoItem)
+            
+        }
+
+
+        var lista = document.getElementsByTagName("ul")[0]
+        var itens = lista.children
+        var novoItem = document.createElement("li")
+        novoItem.textContent = 'Bom dia'
+        lista.insertBefore(novoItem, itens[0])
+
+
+        /*var lista2 = document.getElementsByTagName('ul')[0]
+        var itens2 = lista2.children
+        var novoItem2 = document.createElement('li')
+        novoItem2.textContent = 'boa tarde'
+        lista2.replaceChild(novoItem2, itens2[0])*/
+    </script>
+    
+</body>
+</html>

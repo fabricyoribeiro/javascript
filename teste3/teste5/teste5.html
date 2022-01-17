@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correios</title>
+    <style>
+        body {
+            background-color: white;
+            font: Normal 14pt Arial;
+        }
+        section {
+            background: rgb(255, 255, 255);
+            width:360px;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233);
+        }
+        main {
+            text-align: center;
+        }
+        select {
+            width: 180px;
+        }
+        h1, h2, h3 {
+            color: rgb(0, 0, 131);
+        }
+        #f3 {
+            width: 78px;
+        }
+        #cor {
+            font-size: 24pt;
+        }
+        header {
+            background-color: rgb(236, 236, 236);
+            color: rgb(0, 0, 131);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;            
+        }
+        .baixo{
+            font: Normal 12pt Arial
+            ;
+            color: white;
+            background-color: #0071AD;
+            width: 300px;
+            padding: 7px;
+            border-color: rgb(89, 89, 206);
+            border-radius: 5px;
+        }
+        #anuncio {
+            width: 1490px;
+        }
+        .cima {
+            width: 300px;
+            padding: 7px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <strong id="cor">Correios</strong>        
+        <div>
+            <a href="">Produtos e serviços</a>
+            <a href="">Acesso à informação</a>
+            <a href="">Fale conosco</a>
+            <a href="">idCorreios</a>
+            <a href="">Busca</a>
+        </div>
+    </header>
+    <div>
+        <img id="anuncio" src="anuncio.PNG" alt="" >
+    </div>
+    <main>
+        <section id="sec1" onmouseover="entrar1()" onmouseout="sair1()">  
+            <img src="Capturar.PNG" alt="">
+            <h3>Acompanhe seu objeto</h3>
+            <p>Para rastreamento digite o código ou CPF/CNPJ</p>
+            <input type="text" class="cima">
+        </section>
+        <section id="sec2"onmouseover="entrar2()" onmouseout="sair2()" >
+            <img src="Capturar2.PNG" alt="">
+            <h3>Busca cep ou endereço</h3>
+            <p>Não utilize nº de casa/ apto/ lote/ prédio ou abreviatura</p>
+            <input type="number" class="cima">
+        </section>
+        <section id="sec3" onmouseover="entrar3()" onmouseout="sair3()">
+            <img id="f3" src="Capturar3.PNG" alt="">
+            <h3>Preços e prazos</h3>
+            <p>Selecione o produto ou serviço <br><br> </p>
+            <select class="cima"></select>
+        </section>
+        <section>
+            <img src="Capturar4.PNG" alt="">
+            <h3>Minhas Importações</h3>
+            <p>Receber encomendas dos Correios ficou mais simples</p>
+            <input type="button" value="Importar" class="baixo">
+        </section>
+        <section>
+            <img src="Capturar5.PNG" alt="">
+            <h3>Encontre sua Agência</h3>
+            <p>Uma agência próxima a você<br><br></p>
+            <input type="button" value="Buscar Agência" class="baixo">
+        </section>
+        <section>
+            <img src="Capturar6.PNG" alt="">
+            <h3>Fale Conosco</h3>
+            <p>O que você tem a dizer é muito importante para nós</p>
+            <input type="button" value="Registre um atendimento" class="baixo">
+        </section>
+    </main>
+    <script>
+        var sec1 = document.getElementById('sec1')
+        var sec2 = document.getElementById('sec2')
+        var sec3 = document.getElementById('sec3')
+
+        function entrar1() {
+            sec1.style.boxShadow = '0px 0px 15px rgba(0, 0, 0, 0.615)'
+        }
+        function entrar2() {
+            sec2.style.boxShadow = '0px 0px 15px rgba(0, 0, 0, 0.615)'
+        }
+        function entrar3(){
+            sec3.style.boxShadow = '0px 0px 15px rgba(0, 0, 0, 0.615)'
+        }
+        function sair1(){
+            sec1.style.boxShadow = '2px 2px 10px rgba(0, 0, 0, 0.233)'
+        }
+        function sair2(){
+            sec2.style.boxShadow = '2px 2px 10px rgba(0, 0, 0, 0.233)'
+        }
+        function sair3(){
+            sec3.style.boxShadow = '2px 2px 10px rgba(0, 0, 0, 0.233)'
+        }
+    </script>
+
+
+</body>
+</html>

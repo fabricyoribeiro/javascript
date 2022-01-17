@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        section {
+            margin: auto;
+            width: 500px;
+            background-color: white;
+            padding: 14px;
+            font: Normal 15pt Arial;
+            border-radius: 8px
+        }
+        img {
+            width: 400px;
+        }
+        input#butt {
+            margin: 10px;
+        }
+        div {
+            margin: auto;
+            background-color:white;
+            margin-bottom : 10px;
+            width: 500px;
+            padding: 14px;
+            border-radius: 8px;
+            font: Normal 15pt Arial;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        Faça um Programa que peça o valor da gasolina e do álcool de um posto e diga qual é o combustível mais vantajoso abastecer, sabendo que somente é vantagem abastecer álcool se o preço do mesmo é menor ou igual a 70% do valor da gasolina.
+    </div>
+    <section>
+        <p>Preço da gasolina: R$ <input type="number" name="" id="gas"></p> 
+        <p>Preço do álcool: R$ <input type="number" name="" id="alc"></p>
+        <input onclick="calcular()" type="button" value="Calcular" id="butt"> <br>
+    </section>
+    <script>
+        var gasolina = document.getElementById('gas')
+        var alcool = document.getElementById('alc')
+        function calcular() {
+            var sec = document.getElementsByTagName('section')[0]
+            var novo = document.createElement('div')
+            novo.style.backgroundColor = 'white'
+            novo.style.padding = '9px'
+            novo.style.font = 'Normal 16pt Arial'
+            novo.style.borderRadius = '8px'
+            novo.style.marginTop = '10px'
+            var porc = (alcool.value / gasolina.value) * 100
+            if (porc <= 70) {
+                novo.innerHTML = 'O alcool é mais vantajoso'
+                var imagem = document.createElement('img')
+                imagem.src = 'https://www.ticketlog.com.br/blog/wp-content/uploads/2019/01/alcool-gasolina-1227x736.jpg'
+                sec.appendChild(imagem)
+
+            } else {
+                novo.innerHTML = 'A gasolina é mais vantajosa'
+                var imagem2 = document.createElement('img')
+                imagem2.src = 'https://www.udop.com.br/u_img/noticias/2020/gasolina.jpg'
+                sec.appendChild(imagem2)
+            }
+            sec.appendChild(novo)
+            gasolina.value = ''
+            gasolina.focus()
+            alcool.value = ''
+            alcool.focus()
+            
+            
+            
+            
+            
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

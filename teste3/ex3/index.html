@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior e menor</title>
+</head>
+<body>
+    <h2>Calcular maior e menor número</h2>
+    <div>
+        <p>Primeiro número: <input type="number" name="" id="n1"></p>
+        <p>Segundo número: <input type="number" name="" id="n2"></p>
+        <p>Terceiro número: <input type="number" name="" id="n3"></p>
+        <p><input onclick="calcular()" type="button" value="Calcular"></p>   
+    </div> 
+    <div id="res">
+
+    </div>
+    <script>
+        var res = document.getElementById('res')
+        var n1 = document.getElementById('n1')
+        var n2 = document.getElementById('n2')
+        var n3 = document.getElementById('n3')
+        var n1 = Number(n1.value)
+        var n2 = Number(n2.value)
+        var n3 = Number(n3.value)
+        var lista = [n1, n2, n3]
+        var cont = 1
+        function calcular() {
+            for (let pos in lista) {
+                if (cont == 1) {
+                    maior = menor = lista[pos]
+                }else if (lista[pos] > maior) {
+                    maior = lista[pos]
+                }else if (lista[pos] < menor) {
+                    menor = lista[pos]
+                }
+                cont += 1
+            }            
+            res.innerHTML = `${maior}`
+        }
+    </script>
+</body>
+</html>

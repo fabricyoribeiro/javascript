@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medias</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <header>
+        <strong>Calculador de médias</strong>
+    </header>
+    <section onmouseover="entrar()" id="sec"         onmouseout="sair()">
+        <p>Informe os dados abaixo:</p>
+        <div>
+            Nome do aluno: <input type="text" id="nome">
+            Gênero: <input type="radio" name="radsex" id="masc" checked> Masculino
+            <input type="radio" name="radsex" id="fem"> Feminino
+        </div> <br>
+        <div>
+            Primeira nota: <input type="number" name="nota1" id="nota1">
+            Segunda nota: <input type="number" name="nota2" id="nota2">
+        </div>
+        <p>
+            <input type="button" value="Calcular média do aluno" onclick="calcular()"></p>
+        <div id="res">
+
+        </div>
+    </section>
+    <script src="ex.js"></script>
+    
+</body>
+</html>

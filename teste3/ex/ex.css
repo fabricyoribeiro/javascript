@@ -1,0 +1,23 @@
+section {
+    background: white;
+    width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.582);
+
+}
+
+body {
+    text-align: center;
+    background: cyan;
+    font: Normal 20pt Arial;
+}
+
+header {
+    padding: 10px;
+}
+
+#res {
+    text-align: justify;
+}
